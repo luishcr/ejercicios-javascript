@@ -1,2 +1,2 @@
 ## ejercicios-practicos-js
-Ejercicios para prácticar con JS, CSS y html
+Ejercicios para practicar con JavaScript, HTML y CSS
