@@ -1,2 +1,2 @@
 ## ejercicios-practicos-js
-Ejercicios para practicar con JavaScript, HTML y CSS
+Recolección de ejercicios para practicar con JavaScript que he ido haciendo en varios cursos, con funcionalidad de mostrar/ocultar solución del código en la misma página.
