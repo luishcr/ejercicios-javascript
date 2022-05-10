@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curso Práctico JS</title>
+    <title>Practicando JS</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="index.js"></script>
   </head>
@@ -20,14 +20,14 @@
       </p>
 
       <p>
-        <b>Solución:</b> <br />
+        <b>Fórmula:</b> <br />
         Tenemos que según el teorema de pitágoras: <br />
         a² = b² + c² <br />
         por lo tanto, en nuestro caso: <br />
         h = √(a² - base²/4) <br />
       </p>
 
-      <p id="ej1_input">
+      <p id="ej1_inputs">
         Escribe los lados del triángulo: <br />
         a = <input type="number" class="a" size="10" /> &nbsp; b =
         <input type="number" class="b" size="10" /> &nbsp; c =
@@ -43,10 +43,17 @@
         Ejercicio 2: Calcular el precio final de un determinado producto después
         de aplicarle un descuento mediante cupones válidos.
       </p>
-      <p id="ej2_input">
+      <p id="ej2_inputs">
+        Nombre cupón: <input type="text" class="coupon-name" /> &nbsp; Descuento
+        %: <input type="number" class="coupon-discount" size="10" />
+        <button class="ej2_btnNewCoupon">Añadir cupón</button>
+        <button class="ej2_btnDelCoupon">Borrar cupón</button> <br />
+        Cupones actualmente:
+        <span class="coupons-list">No hay cupones disponibles.</span>
+        &nbsp;<br />
         Precio del producto = <input type="number" class="price" /> <br />
-        Cupón de descuento = <input type="text" class="coupon" /> <br />
-        <button type="button" class="ej2_btn">Calcula Precio Final</button>
+        Utilizar cupón = <input type="text" class="coupon" /> <br />
+        <button type="button" class="ej2_btn">Calcular Precio Final</button>
       </p>
       <p id="ej2_result"></p>
 
@@ -62,7 +69,8 @@
         Añadir número a la lista =>
         <input type="number" class="num" size="10" />
         <button type="button" class="ej3_btnNewNum">Añadir número</button>
-        &nbsp; <span class="ej3_NewNum">La lista está vacia</span> <br />
+        <button type="button" class="ej3_delLastNum">Borrar número</button>
+        &nbsp; <span class="ej3_NumList">La lista está vacía</span> <br />
         <button type="button" class="ej3_btnMedia">Calcular Media</button>
         <button type="button" class="ej3_btnMediana">Calcular Mediana</button>
         <button type="button" class="ej3_btnModa">Calcular Moda</button>
