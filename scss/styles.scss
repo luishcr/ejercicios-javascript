@@ -1,0 +1,122 @@
+// VARIABLES
+$primary-color: #fafafa;
+$secondary-color: #101010;
+$terciary-color: #fdd405;
+$light-background: #626262;
+$dark-background: #2f2f2f;
+
+//  GLOBALS STYLES
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  transition: 0.3s ease all;
+
+  &.dark {
+    background-color: $dark-background;
+  }
+}
+
+// Body
+
+.header {
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+  padding: 2rem;
+
+  .switch {
+    background-color: $light-background;
+    border-radius: 10rem;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      background-color: $primary-color;
+      top: 0;
+      left: 0;
+      transition: 0.5s ease all;
+      right: unset;
+      border-radius: 10rem;
+      box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+    }
+
+    &.active {
+      background-color: $terciary-color;
+      color: $secondary-color;
+      &::after {
+        right: 0;
+        left: unset;
+      }
+    }
+
+    span {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      display: block;
+      background: none;
+      color: $primary-color;
+    }
+  }
+}
+
+.container {
+  background-color: $primary-color;
+  box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+  color: $secondary-color;
+  border-radius: 1rem;
+  margin: auto;
+  padding: 2rem;
+  max-width: 120rem;
+  transition: 0.3s ease all;
+
+  body.dark & {
+    background-color: $light-background;
+    color: $primary-color;
+    box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(118, 118, 118, 0.2);
+
+    hr {
+      color: $primary-color;
+    }
+  }
+
+  h1 {
+    margin: 2.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 1.5rem;
+  }
+
+  button {
+    padding: 0.3rem;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}

@@ -1,3 +1,28 @@
+// DARK MODE
+
+// Switcher Dark-mode
+const btnSwitch = document.querySelector(".switch");
+
+btnSwitch.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  btnSwitch.classList.toggle("active");
+
+  // Dark-mode persistente
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark-mode", "true");
+  } else {
+    localStorage.setItem("dark-mode", "false");
+  }
+});
+//Obtener modo-actual
+if (localStorage.getItem("dark-mode") === "true") {
+  document.body.classList.add("dark");
+  btnSwitch.classList.add("active");
+} else {
+  document.body.classList.remove("dark");
+  btnSwitch.classList.remove("active");
+}
+
 // EJERCICIO 1
 document
   .querySelector("#ej1_inputs .ej1_btn")
@@ -53,7 +78,7 @@ function newCoupon() {
 
   document.querySelector(
     "#ej2_inputs .coupons-list"
-  ).innerHTML = `${nombreCuponesActuales}`;
+  ).innerHTML = `'${nombreCuponesActuales}'`;
 }
 
 function delCoupon() {
@@ -67,7 +92,7 @@ function delCoupon() {
   } else {
     document.querySelector(
       "#ej2_inputs .coupons-list"
-    ).innerHTML = `${nombreCuponesActuales}`;
+    ).innerHTML = `'${nombreCuponesActuales}'`;
   }
 }
 

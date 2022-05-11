@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practicando JS</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a25f409e18.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/index.js"></script>
   </head>
   <body>
+    <div class="header">
+      <button class="switch">
+        <span> <i class="fa-solid fa-sun"></i></span>
+        <span> <i class="fa-solid fa-moon"></i></span>
+      </button>
+    </div>
     <div class="container">
       <h1>Ejercicios Prácticos JS</h1>
       <p>
-        Ejercicio 1: Crear una función para calcular la altura de un triángulo
-        isósceles. La función debe recibir, como parámetros, la longitud de los
-        3 lados del triángulo. La función debe validar que la longitud de los 3
-        lados del triángulo corresponden a un triángulo isósceles. La función
-        debe retornar la altura del triángulo.
+        1) Crear una función para calcular la altura de un triángulo isósceles.
+        La función debe recibir, como parámetros, la longitud de los 3 lados del
+        triángulo. La función debe validar que la longitud de los 3 lados del
+        triángulo corresponden a un triángulo isósceles. La función debe
+        retornar la altura del triángulo.
       </p>
 
       <p>
@@ -40,8 +51,8 @@
       <hr />
       <br />
       <p>
-        Ejercicio 2: Calcular el precio final de un determinado producto después
-        de aplicarle un descuento mediante cupones válidos.
+        2) Calcular el precio final de un determinado producto después de
+        aplicarle un descuento mediante cupones válidos.
       </p>
       <p id="ej2_inputs">
         Nombre cupón: <input type="text" class="coupon-name" /> &nbsp; Descuento
@@ -61,8 +72,8 @@
       <hr />
       <br />
       <p>
-        Ejercicio 3: Calcular el promedio (media aritmética), mediana y moda
-        (elemento que más se repite) de una lista.
+        3) Calcular el promedio (media aritmética), mediana y moda (elemento que
+        más se repite) de una lista.
       </p>
       <p id="ej3_inputs">
         Crea una lista de números: <br />
