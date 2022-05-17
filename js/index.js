@@ -23,37 +23,82 @@ if (localStorage.getItem("dark-mode") === "true") {
   btnSwitch.classList.remove("active");
 }
 
-// EJERCICIO 1
-document
-  .querySelector("#ej1_inputs .ej1_btn")
-  .addEventListener("click", calculaAltura);
-function calculaAltura() {
-  let a = Number(document.querySelector("#ej1_inputs .a").value);
-  let b = Number(document.querySelector("#ej1_inputs .b").value);
-  let c = Number(document.querySelector("#ej1_inputs .c").value);
-  let h = 0;
-  if (a == b) {
-    h = Math.sqrt(a * a - (c * c) / 4).toFixed(2);
-    document.getElementById(
-      "ej1_result"
-    ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${a}<br> Lado 2 = ${b}<br> Base = ${c}<br> Altura = ${h}`;
-  } else if (a == c) {
-    h = Math.sqrt(a * a - (b * b) / 4).toFixed(2);
-    document.getElementById(
-      "ej1_result"
-    ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${a}<br> Lado 2 = ${c}<br> Base = ${b}<br> Altura = ${h}`;
-  } else if (c == b) {
-    h = Math.sqrt(c * c - (a * a) / 4).toFixed(2);
-    document.getElementById(
-      "ej1_result"
-    ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${c}<br> Lado 2 = ${b}<br> Base = ${a}<br> Altura = ${h}`;
-  } else {
-    document.getElementById("ej1_result").innerHTML =
-      "<br>No es un triangulo isósceles, no puedo calcular la altura";
-  }
-}
+/*-----------------*/
+/*   EJERCICIO 1   */
+/*-----------------*/
 
-// EJERCICIO 2
+document.querySelector("#ej1 .btn__calc").addEventListener("click", () => {
+  let a = document.querySelector(".input__a").value;
+  let b = document.querySelector(".input__b").value;
+  let c = document.querySelector(".input__c").value;
+  let h = 0;
+  if (a === "" || b === "" || c === "") {
+    document.querySelector(
+      "#ej1 .result"
+    ).innerHTML = `<br>Debes introducir tres números`;
+  } else {
+    if (a === b) {
+      h = Math.sqrt(a * a - (c * c) / 4).toFixed(2);
+      document.querySelector(
+        "#ej1 .result"
+      ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${a}<br> Lado 2 = ${b}<br> Base = ${c}<br> Altura = ${h}`;
+    } else if (a === c) {
+      h = Math.sqrt(a * a - (b * b) / 4).toFixed(2);
+      document.querySelector(
+        "#ej1 .result"
+      ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${a}<br> Lado 2 = ${c}<br> Base = ${b}<br> Altura = ${h}`;
+    } else if (c === b) {
+      h = Math.sqrt(c * c - (a * a) / 4).toFixed(2);
+      document.querySelector(
+        "#ej1 .result"
+      ).innerHTML = `<br>Es un triangulo isósceles:<br> Lado 1 = ${c}<br> Lado 2 = ${b}<br> Base = ${a}<br> Altura = ${h}`;
+    } else {
+      document.querySelector("#ej1 .result").innerHTML =
+        "<br>No es un triangulo isósceles";
+    }
+  }
+});
+
+const ej1ShowCodeBtn = document.querySelector("#ej1 .btn__showcode");
+ej1ShowCodeBtn.addEventListener("click", () => {
+  document.querySelector(
+    "#ej1 .code"
+  ).innerHTML = `<pre>document.querySelector("#ej1 .btn__calc").addEventListener("click", () => {
+    let a = document.querySelector(".input__a").value;
+    let b = document.querySelector(".input__b").value;
+    let c = document.querySelector(".input__c").value;
+    let h = 0;
+    if (a === "" || b === "" || c === "") {
+      document.querySelector(
+        "#ej1 .result"
+      ).innerHTML = \`Debes introducir números\`;
+    } else {
+      if (a === b) {
+        h = Math.sqrt(a * a - (c * c) / 4).toFixed(2);
+        document.querySelector(
+          "#ej1 .result"
+        ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${a} Lado 2 = \${b} Base = \${c} Altura = \${h}\`;
+      } else if (a === c) {
+        h = Math.sqrt(a * a - (b * b) / 4).toFixed(2);
+        document.querySelector(
+          "#ej1 .result"
+        ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${a} Lado 2 = \${c} Base = \${b} Altura = \${h}\`;
+      } else if (c === b) {
+        h = Math.sqrt(c * c - (a * a) / 4).toFixed(2);
+        document.querySelector(
+          "#ej1 .result"
+        ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${c} Lado 2 = \${b} Base = \${a} Altura = \${h}\`;
+      } else {
+        document.querySelector("#ej1 .result").innerHTML =
+          "No es un triangulo isósceles, no puedo calcular la altura";
+      }
+    }
+  });</pre> `;
+});
+
+/*-----------------*/
+/*   EJERCICIO 2   */
+/*-----------------*/
 const coupons = [];
 
 document
@@ -124,7 +169,9 @@ function calculaPrecio() {
   }
 }
 
-// EJERCICIO 3
+/*-----------------*/
+/*   EJERCICIO 3   */
+/*-----------------*/
 let lista = [];
 document.querySelector(".ej3_btnNewNum").addEventListener("click", newNum);
 document.querySelector(".ej3_delLastNum").addEventListener("click", delNum);

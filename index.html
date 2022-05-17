@@ -20,32 +20,46 @@
         <span> <i class="fa-solid fa-moon"></i></span>
       </button>
     </div>
+
     <div class="container">
       <h1>Ejercicios Prácticos JS</h1>
-      <p>
-        1) Crear una función para calcular la altura de un triángulo isósceles.
-        La función debe recibir, como parámetros, la longitud de los 3 lados del
-        triángulo. La función debe validar que la longitud de los 3 lados del
-        triángulo corresponden a un triángulo isósceles. La función debe
-        retornar la altura del triángulo.
-      </p>
 
-      <p>
-        <b>Fórmula:</b> <br />
-        Tenemos que según el teorema de pitágoras: <br />
-        a² = b² + c² <br />
-        por lo tanto, en nuestro caso: <br />
-        h = √(a² - base²/4) <br />
-      </p>
+      <div id="ej1">
+        <p>
+          1) Crear una función para calcular la altura de un triángulo
+          isósceles. La función debe recibir, como parámetros, la longitud de
+          los 3 lados del triángulo. La función debe validar que la longitud de
+          los 3 lados del triángulo corresponden a un triángulo isósceles. La
+          función debe retornar la altura del triángulo.
+        </p>
 
-      <p id="ej1_inputs">
-        Escribe los lados del triángulo: <br />
-        a = <input type="number" class="a" size="10" /> &nbsp; b =
-        <input type="number" class="b" size="10" /> &nbsp; c =
-        <input type="number" class="c" size="10" /> &nbsp;
-        <button type="button" class="ej1_btn">Calcular</button>
-      </p>
-      <p id="ej1_result"></p>
+        <p>
+          <b>Fórmula:</b> <br />
+          Tenemos que según el teorema de pitágoras: <br />
+          a² = b² + c² <br />
+          por lo tanto, en nuestro caso: <br />
+          h = √(a² - base²/4) <br />
+        </p>
+
+        <form>
+          Escribe los lados del triángulo: <br />
+          a = <input type="number" class="input__a" size="10" required /> &nbsp;
+          b = <input type="number" class="input__b" size="10" required /> &nbsp;
+          c = <input type="number" class="input__c" size="10" required /> &nbsp;
+          <button type="button" class="btn__calc">Calcular</button>
+        </form>
+
+        <p class="result"></p>
+
+        <div class="btn__showcode">
+          <button type="button" class="hvr-icon-down hvr-icon2">
+            Mostrar Código
+            <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+          </button>
+        </div>
+
+        <p class="code"></p>
+      </div>
 
       <br />
       <hr />
