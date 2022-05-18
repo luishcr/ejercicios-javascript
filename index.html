@@ -24,7 +24,7 @@
     <div class="container">
       <h1>Ejercicios Prácticos JS</h1>
 
-      <div id="ej1">
+      <div id="e1">
         <p>
           1) Crear una función para calcular la altura de un triángulo
           isósceles. La función debe recibir, como parámetros, la longitud de
@@ -36,7 +36,7 @@
         <p>
           <b>Fórmula:</b> <br />
           Tenemos que según el teorema de pitágoras: <br />
-          a² = b² + c² <br />
+          (base/2)² + altura (h)² = lado² (a) <br />
           por lo tanto, en nuestro caso: <br />
           h = √(a² - base²/4) <br />
         </p>
@@ -46,7 +46,9 @@
           a = <input type="number" class="input__a" size="10" required /> &nbsp;
           b = <input type="number" class="input__b" size="10" required /> &nbsp;
           c = <input type="number" class="input__c" size="10" required /> &nbsp;
-          <button type="button" class="btn__calc">Calcular</button>
+          <button type="button" class="btn__calc-height">Calcular</button>
+          &nbsp;
+          <span class="error"></span>
         </form>
 
         <p class="result"></p>
@@ -64,43 +66,95 @@
       <br />
       <hr />
       <br />
-      <p>
-        2) Calcular el precio final de un determinado producto después de
-        aplicarle un descuento mediante cupones válidos.
-      </p>
-      <p id="ej2_inputs">
-        Nombre cupón: <input type="text" class="coupon-name" /> &nbsp; Descuento
-        %: <input type="number" class="coupon-discount" size="10" />
-        <button class="ej2_btnNewCoupon">Añadir cupón</button>
-        <button class="ej2_btnDelCoupon">Borrar cupón</button> <br />
-        Cupones actualmente:
-        <span class="coupons-list">No hay cupones disponibles.</span>
-        &nbsp;<br />
-        Precio del producto = <input type="number" class="price" /> <br />
-        Utilizar cupón = <input type="text" class="coupon" /> <br />
-        <button type="button" class="ej2_btn">Calcular Precio Final</button>
-      </p>
-      <p id="ej2_result"></p>
+
+      <div id="e2">
+        <p>
+          2) Calcular el precio final de un determinado producto después de
+          aplicarle un descuento mediante cupones válidos.
+        </p>
+
+        <form>
+          Nombre cupón: <input type="text" class="input__coupon-name" /> &nbsp;
+          Descuento %:
+          <input type="number" class="input__coupon-discount" size="10" />
+          <button type="button" class="btn__add-coupon">Añadir cupón</button>
+          <button type="button" class="btn__del-coupon">Borrar cupón</button>
+          &nbsp;
+          <span class="info"></span>
+          <br />
+          Cupones actualmente:
+          <span class="coupons-list">No hay cupones disponibles.</span>
+          &nbsp;<br />
+          Precio del producto = <input type="number" class="input__price" />
+          <br />
+          Utilizar cupón = <input type="text" class="input__coupon" /> &nbsp;
+          <span class="error"></span>
+
+          <br />
+          <button type="button" class="btn__calc-price">
+            Calcular Precio Final
+          </button>
+        </form>
+
+        <p class="result"></p>
+
+        <div class="btn__showcode">
+          <button type="button" class="hvr-icon-down hvr-icon2">
+            Mostrar Código
+            <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+          </button>
+        </div>
+
+        <p class="code"></p>
+      </div>
 
       <br />
       <hr />
       <br />
-      <p>
-        3) Calcular el promedio (media aritmética), mediana y moda (elemento que
-        más se repite) de una lista.
-      </p>
-      <p id="ej3_inputs">
-        Crea una lista de números: <br />
-        Añadir número a la lista =>
-        <input type="number" class="num" size="10" />
-        <button type="button" class="ej3_btnNewNum">Añadir número</button>
-        <button type="button" class="ej3_delLastNum">Borrar número</button>
-        &nbsp; <span class="ej3_NumList">La lista está vacía</span> <br />
-        <button type="button" class="ej3_btnMedia">Calcular Media</button>
-        <button type="button" class="ej3_btnMediana">Calcular Mediana</button>
-        <button type="button" class="ej3_btnModa">Calcular Moda</button>
-      </p>
-      <p id="ej3_result"></p>
+
+      <div id="e3">
+        <p>
+          3) Calcular el promedio (media aritmética), mediana y moda (elemento
+          que más se repite) de una lista.
+        </p>
+
+        <form>
+          Crea una lista de números: <br />
+          Añadir número a la lista =>
+          <input type="number" class="input__add-number" size="10" />
+          <button type="button" class="btn__add-number">Añadir número</button>
+          <button type="button" class="btn__del-number">Borrar número</button>
+          &nbsp; <span class="show-number-list">La lista está vacía</span>
+          <br />
+          <button type="button" class="btn__calc-media">Calcular Media</button>
+          <button type="button" class="btn__calc-mediana">
+            Calcular Mediana
+          </button>
+          <button type="button" class="btn__calc-moda">Calcular Moda</button>
+        </form>
+
+        <p class="result"></p>
+
+        <div class="btn__showcode">
+          <button type="button" class="hvr-icon-down hvr-icon2">
+            Mostrar Código
+            <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+          </button>
+        </div>
+
+        <p class="code"></p>
+      </div>
     </div>
+    <footer>
+      <br />
+      <p>
+        <a
+          href="https://github.com/luishcr"
+          target="_blank"
+          rel="noopener noreferrer"
+          >luishcr@github</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

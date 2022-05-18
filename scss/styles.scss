@@ -5,7 +5,7 @@
 $primary-color: #fafafa;
 $secondary-color: #101010;
 $terciary-color: #fdd405;
-$dark-background: #4c4c4c;
+$dark-background: #424242;
 $darknest-background: #2f2f2f;
 $code-background: #3d3d3d;
 
@@ -29,6 +29,26 @@ body {
 
   &.dark {
     background-color: $darknest-background;
+  }
+
+  footer {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+
+    p {
+      font-size: 2rem;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+
+        &:hover {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 
@@ -99,7 +119,12 @@ body {
   body.dark & {
     background-color: $dark-background;
     color: $primary-color;
-    box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(118, 118, 118, 0.2);
+    border: 1px solid $primary-color;
+    .btn__showcode {
+      button {
+        color: $primary-color;
+      }
+    }
 
     hr {
       color: $primary-color;
@@ -128,6 +153,13 @@ body {
 
   span {
     font-weight: 600;
+    &.error,
+    .error {
+      color: brown;
+      i {
+        color: brown;
+      }
+    }
   }
 
   pre {
@@ -152,6 +184,15 @@ body {
       i {
         margin: 1rem;
       }
+    }
+  }
+
+  .code {
+    transform: scaleY(0);
+    transition: transform 400ms ease 0ms;
+    &.code__show {
+      transform: scaleY(1);
+      transition: transform 400ms ease 0ms;
     }
   }
 }
