@@ -419,3 +419,88 @@ btnCalcModa.addEventListener("click", () => {});</pre>`;
   </button>`;
   }
 });
+
+/*-------------------*/
+/*     EXERCISE 4    */
+/*-------------------*/
+document.querySelector("#e4 .btn__roll-dice ").addEventListener("click", () => {
+  document.querySelector("#e4 .img-dice").src = "img/rollingdice.gif";
+  setTimeout(() => {
+    let diceNumber = Number(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
+    document.querySelector(
+      "#e4 .result"
+    ).innerHTML = `Has sacado un: ${diceNumber}`;
+    switch (diceNumber) {
+      case 1:
+        document.querySelector("#e4 .img-dice").src = "img/dado_1.jpg";
+        break;
+      case 2:
+        document.querySelector("#e4 .img-dice").src = "img/dado_2.jpg";
+        break;
+      case 3:
+        document.querySelector("#e4 .img-dice").src = "img/dado_3.jpg";
+        break;
+      case 4:
+        document.querySelector("#e4 .img-dice").src = "img/dado_4.jpg";
+        break;
+      case 5:
+        document.querySelector("#e4 .img-dice").src = "img/dado_5.jpg";
+        break;
+      case 6:
+        document.querySelector("#e4 .img-dice").src = "img/dado_6.jpg";
+        break;
+    }
+  }, 3000);
+});
+
+//  Show/hide code animation
+const e4BtnShowCode = document.querySelector("#e4 .btn__showcode");
+e4BtnShowCode.addEventListener("click", () => {
+  const showCode = document.querySelector("#e4 .code");
+  showCode.classList.toggle("code__show");
+  if (showCode.className === "code code__show") {
+    showCode.innerHTML = `<pre>document.querySelector("#e4 .btn__roll-dice ").addEventListener("click", () => {
+  document.querySelector("#e4 .img-dice").src = "img/rollingdice.gif";
+  setTimeout(() => {
+    let diceNumber = Number(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
+    document.querySelector(
+      "#e4 .result"
+    ).innerHTML = \`Has sacado un: \${diceNumber}\`;
+    switch (diceNumber) {
+      case 1:
+        document.querySelector("#e4 .img-dice").src = "img/dado_1.jpg";
+        break;
+      case 2:
+        document.querySelector("#e4 .img-dice").src = "img/dado_2.jpg";
+        break;
+      case 3:
+        document.querySelector("#e4 .img-dice").src = "img/dado_3.jpg";
+        break;
+      case 4:
+        document.querySelector("#e4 .img-dice").src = "img/dado_4.jpg";
+        break;
+      case 5:
+        document.querySelector("#e4 .img-dice").src = "img/dado_5.jpg";
+        break;
+      case 6:
+        document.querySelector("#e4 .img-dice").src = "img/dado_6.jpg";
+        break;
+    }
+  }, 3000);
+});</pre>`;
+    e4BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
+        Ocultar código
+        <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+      </button>`;
+  } else {
+    showCode.innerHTML = "";
+    e4BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
+    Mostrar Código
+    <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+  </button>`;
+  }
+});
+
+/*-------------------*/
+/*     EXERCISE 5    */
+/*-------------------*/

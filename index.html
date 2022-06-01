@@ -144,6 +144,377 @@
 
         <p class="code"></p>
       </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div id="e4">
+        <p>4) El juego de la oca (en progreso...).</p>
+
+        <p>
+          <button type="button" class="btn__roll-dice">Rodar Dado</button>
+          <img
+            class="img-dice"
+            src="img/dado.jpg"
+            width="100px"
+            height="100px"
+            alt="dado"
+          />
+        </p>
+
+        <p class="result"></p>
+
+        <div class="btn__showcode">
+          <button type="button" class="hvr-icon-down hvr-icon2">
+            Mostrar Código
+            <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+          </button>
+        </div>
+
+        <p class="code"></p>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+      <!-- 
+    <p>
+      Ejercicio 4: Crea un párrafo. A continuación, crea 2 botones, uno
+      aumentará el tamaño del texto y el otro lo disminuirá
+      (incrementará/disminuirá en un 1px cada vez que se pulse)
+    </p>
+    <br />
+
+    <p id="parrafo" style="font-size: 16px">
+      Lorem ipsum dolor sit amet consectetur adipisicing.
+    </p>
+    <br />
+    <button id="masSize" onclick="masPx()">Aumentar</button>
+    <button id="menosSize" onclick="menosPx()">Disminuir</button>
+    <br />
+
+    <span>
+      <script>
+        let tamanyoActual = document.getElementById("parrafo").style.fontSize;
+        tamanyoActual = parseInt(tamanyoActual);
+
+        function masPx() {
+          tamanyoActual += 1;
+          document.getElementById(
+            "parrafo"
+          ).style.fontSize = `${tamanyoActual}px`;
+          console.log(tamanyoActual);
+        }
+        function menosPx() {
+          tamanyoActual -= 1;
+          document.getElementById(
+            "parrafo"
+          ).style.fontSize = `${tamanyoActual}px`;
+          console.log(tamanyoActual);
+        }
+      </script>
+    </span>
+
+    <br />
+    <hr />
+    <br />
+
+    <p>
+      Ejercicio 5: Pon un botón "pulsame si puedes" que al pasar el ratón por
+      encima, cambie a una posición aleatoria de la pantalla. Ayuda: Recuerda
+      que el la "position:absolute" Para obtener el ancho de la ventana:
+      window.innerWidth Para obtener el alto de la ventana: window.innerHeigh
+    </p>
+
+    <br />
+
+    <button id="botonMov" onmouseover="botonHover()" style="color: red">
+      Púlsame si puedes
+    </button>
+    <br />
+    <span>
+      <script>
+        let moveBoton = document.getElementById("botonMov");
+        function botonHover() {
+          console.log("Hay Hover");
+          moveBoton.style.position = "absolute";
+          moveBoton.style.left =
+            Math.random() * (window.innerWidth - 10) + 10 + "px";
+          moveBoton.style.top =
+            Math.random() * (window.innerHeight - 10) + 10 + "px";
+          console.log(moveBoton);
+        }
+      </script>
+    </span>
+    <br />
+    <hr />
+    <br />
+
+    <p>
+      Ejercicio 6: Crea una galería de imágenes. Debe constar de una fila de
+      imágenes de 100x100px. Cuando pase el ratón por encima de ellas, deberá
+      aparecer la imágen en grande. Para la realización de este ejercicio
+      utiliza la librería Bootstrap.
+    </p>
+    <br />
+
+    <div class="container">
+      <div class="row row-cols-4">
+        <div class="col">
+          <img
+            class="fotos img-fluid"
+            src="https://images.pexels.com/photos/7397170/pexels-photo-7397170.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            onmouseover="zoomImg1()"
+            onmouseout="normalImg1()"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+        </div>
+        <div class="col">
+          <img
+            class="fotos img-fluid"
+            src="https://images.pexels.com/photos/7397178/pexels-photo-7397178.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            onmouseover="zoomImg2()"
+            onmouseout="normalImg2()"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+        </div>
+        <div class="col">
+          <img
+            class="fotos img-fluid"
+            src="https://images.pexels.com/photos/7397134/pexels-photo-7397134.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            onmouseover="zoomImg3()"
+            onmouseout="normalImg3()"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+        </div>
+        <div class="col">
+          <img
+            class="fotos img-fluid"
+            src="https://images.pexels.com/photos/4225229/pexels-photo-4225229.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            onmouseover="zoomImg4()"
+            onmouseout="normalImg4()"
+            width="100px"
+            height="100px"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <span>
+      <script>
+        let galeria = document.getElementsByClassName("fotos");
+        function zoomImg1() {
+          galeria[0].width = 300;
+          galeria[0].height = 300;
+        }
+
+        function normalImg1() {
+          galeria[0].width = 100;
+          galeria[0].height = 100;
+        }
+
+        function zoomImg2() {
+          galeria[1].width = 300;
+          galeria[1].height = 300;
+        }
+
+        function normalImg2() {
+          galeria[1].width = 100;
+          galeria[1].height = 100;
+        }
+        function zoomImg3() {
+          galeria[2].width = 300;
+          galeria[2].height = 300;
+        }
+
+        function normalImg3() {
+          galeria[2].width = 100;
+          galeria[2].height = 100;
+        }
+        function zoomImg4() {
+          galeria[3].width = 300;
+          galeria[3].height = 300;
+        }
+
+        function normalImg4() {
+          galeria[3].width = 100;
+          galeria[3].height = 100;
+        }
+      </script>
+    </span>
+
+    <br />
+    <hr />
+    <br />
+
+    <p>
+      Ejercicio 7: Crea el juego, piedra, papel o tijeras. Primero el juego
+      seleccionará una opción (que no se mostrará), a continuación pedirá que
+      inserte el jugador. El juego mostrará quién es el ganador.
+    </p>
+    <br />
+
+    <button id="btnJuego" onclick="eligeNum()">
+      Jugar Piedra, Papel y Tijeras
+    </button>
+    <div id="piedraPapelTijeras"></div>
+
+    <span>
+      <script>
+        let juegoPPT = document.getElementById("piedraPapelTijeras");
+        function eligeNum() {
+          numCPU = Number(Math.floor(Math.random() * (3 - 1 + 1)) + 1);
+          juegoPPT.innerHTML = "La máquina ya ha elegido.";
+          console.log(`La máquina ha elegido: ${numCPU}`);
+          numJug = Number(
+            prompt("Elige número:\n1. Piedra.\n2. Papel.\n3. Tijeras.")
+          );
+          console.log(`El jugador a elegido: ${numJug}`);
+          if (numCPU == numJug) {
+            juegoPPT.innerHTML = "La máquina y el jugador han empatado";
+          } else if (
+            (numCPU == 1 && numJug == 3) ||
+            (numCPU == 2 && numJug == 1) ||
+            (numCPU == 3 && numJug == 2)
+          ) {
+            juegoPPT.innerHTML = "La máquina ha ganado";
+          } else {
+            juegoPPT.innerHTML = "El jugador ha ganado";
+          }
+        }
+      </script>
+    </span>
+
+    <br />
+    <hr />
+    <br />
+
+    <p>
+      Ejercicio 8: Crea una web con los siguientes campos de un formulario:
+      (Nombre, Apellidos, Email, Telefono, Boton enviar). Cuando se pulse el
+      botón enviar, se realizará una llamada a la función validar en el que si
+      no se cumplen las siguientes características se pondrá un cartel rojo al
+      lado del elemento que no lo cumpla mostrando el error. Nombre al menos 3
+      caracteres, Apellidos, al menos debe tener un " " y 5 dígitos, Telefono, 9
+      números y no admite letras.
+    </p>
+    <br />
+
+    <form method="get" onsubmit="validar(event)">
+      <fieldset>
+        <legend>Formulario WEB</legend>
+        <label for="form_nombre">
+          Nombre:
+          <input
+            type="text"
+            id="form_nombre"
+            placeholder="Escribe tu nombre..."
+            size="30"
+          />
+          <span id="error_nombre"></span>
+        </label>
+        <br />
+        <label for="form_apellido">
+          Apellidos:
+          <input
+            type="text"
+            id="form_apellido"
+            placeholder="Escribe tu apellido..."
+            size="30"
+          />
+          <span id="error_apellidos"></span>
+        </label>
+        <br />
+        <label for="form_email">
+          Email:
+          <input
+            type="email"
+            id="form_email"
+            placeholder="Escribe un email..."
+            size="30"
+          />
+          <span id="error_email"></span>
+        </label>
+        <br />
+        <label for="form_telefono">
+          Teléfono:
+          <input
+            type="number"
+            id="form_telefono"
+            placeholder="Número de contacto..."
+          />
+          <span id="error_telefono"></span>
+        </label>
+        <br /><br />
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <span>
+      <script>
+        let formNombre = document.getElementById("form_nombre");
+        let formApellido = document.getElementById("form_apellido");
+        let formEmail = document.getElementById("form_email");
+        let formTelefono = document.getElementById("form_telefono");
+        let formBtn = document.getElementById("form_btn");
+
+        function validar(event) {
+          if (formNombre.value.length > 2) {
+            console.log("Nombre correcto");
+          } else {
+            document.getElementById("error_nombre").innerHTML = "Error!";
+            document.getElementById("error_nombre").style.border =
+              "1px solid red";
+            console.log("Nombre incorrecto");
+            event.preventDefault();
+          }
+          if (formApellido.value.length > 0) {
+            console.log("Apellido correcto");
+          } else {
+            document.getElementById("error_apellidos").innerHTML = "Error!";
+            document.getElementById("error_apellidos").style.border =
+              "1px solid red";
+            console.log("Apellido incorrecto");
+            event.preventDefault();
+          }
+
+          let re =
+            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;
+          let result = re.exec(formEmail.value);
+          
+          if (result == null) {
+            document.getElementById("error_email").innerHTML = "Error!";
+            document.getElementById("error_email").style.border =
+              "1px solid red";
+            console.log("Email incorrecto");
+          } else {
+            console.log("Email correcto");
+          }
+
+          if (formTelefono.value.length > 8) {
+            console.log("Teléfono correcto");
+          } else {
+            document.getElementById("error_telefono").innerHTML = "Error!";
+            document.getElementById("error_email").style.border =
+              "1px solid red";
+            console.log("Email incorrecto");
+            event.preventDefault();
+          }
+        }
+      </script>
+    </span>
+
+    <br />
+    <hr />
+    <br /> -->
     </div>
     <footer>
       <br />
