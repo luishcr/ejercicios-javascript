@@ -1,2 +1,5 @@
-## JavaScript Challenges
-Various JavaScripts Challenges for mastering the basics.
+## JavaScript Challenges (WIP)
+Challenges from:
+- Platzi
+- HackerRank
+- LeetCode
