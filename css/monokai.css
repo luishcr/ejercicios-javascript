@@ -16,13 +16,17 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
   color: #f92672;
 }
 
-.hljs-code {
-  color: #66d9ef;
+.hljs-code,
+.hljs-variable
+ {
+  
+  color: #a3cdd5;
 }
 
 .hljs-attribute,
 .hljs-symbol,
 .hljs-regexp,
+.hljs-title,
 .hljs-link {
   color: #bf79db;
 }
@@ -30,7 +34,6 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .hljs-string,
 .hljs-bullet,
 .hljs-subst,
-.hljs-title,
 .hljs-section,
 .hljs-emphasis,
 .hljs-type,
@@ -38,7 +41,6 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-addition,
-.hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
   color: #a6e22e;

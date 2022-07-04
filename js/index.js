@@ -65,50 +65,19 @@ e1BtnCalc.addEventListener("click", () => {
   }
 });
 
-//  Show/hide code animation
+//  Show/hide code animation BTN1
 const e1BtnShowCode = document.querySelector("#e1 .btn__showcode");
 e1BtnShowCode.addEventListener("click", () => {
   const showCode = document.querySelector("#e1 .code");
   showCode.classList.toggle("code__show");
   if (showCode.className === "code code__show") {
-    showCode.innerHTML = `<pre>const e1BtnCalc = document.querySelector("#e1 .btn__calc");
-e1BtnCalc.addEventListener("click", () => {
-  let a = document.querySelector(".input__a").value;
-  let b = document.querySelector(".input__b").value;
-  let c = document.querySelector(".input__c").value;
-  let h = 0;
-  if (a === "" || b === "" || c === "") {
-    document.querySelector(
-      "#e1 .result"
-    ).innerHTML = \`Debes introducir tres números\`;
-  } else {
-    if (a === b && c < (2 * a || 2 * b)) {
-      h = Math.sqrt(a * a - (c * c) / 4).toFixed(2);
-      document.querySelector(
-        "#e1 .result"
-      ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${a} Lado 2 = \${b} Base = \${c} Altura = \${h}\`;
-    } else if (a === c && b < (2 * a || 2 * c)) {
-      h = Math.sqrt(a * a - (b * b) / 4).toFixed(2);
-      document.querySelector(
-        "#e1 .result"
-      ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${a} Lado 2 = \${c} Base = \${b} Altura = \${h}\`;
-    } else if (c === b && a < (2 * c || 2 * b)) {
-      h = Math.sqrt(c * c - (a * a) / 4).toFixed(2);
-      document.querySelector(
-        "#e1 .result"
-      ).innerHTML = \`Es un triangulo isósceles: Lado 1 = \${c} Lado 2 = \${b} Base = \${a} Altura = \${h}\`;
-    } else {
-      document.querySelector("#e1 .result").innerHTML =
-        "No es un triangulo isósceles";
-    }
-  }
-});</pre> `;
+    showCode.style.display = "block";
     e1BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
         Ocultar código
         <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
       </button>`;
   } else {
-    showCode.innerHTML = "";
+    showCode.style.display = "none";
     e1BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
     Mostrar Código
     <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
@@ -199,93 +168,19 @@ btnCalcPrice.addEventListener("click", () => {
   }
 });
 
-//  Show/hide code animation
+//  Show/hide code animation BTN2
 const e2BtnShowCode = document.querySelector("#e2 .btn__showcode");
 e2BtnShowCode.addEventListener("click", () => {
   const showCode = document.querySelector("#e2 .code");
   showCode.classList.toggle("code__show");
   if (showCode.className === "code code__show") {
-    showCode.innerHTML = `<pre>const coupons = [];
-const btnAddCoupon = document.querySelector("#e2 .btn__add-coupon");
-const btnDelCoupon = document.querySelector("#e2 .btn__del-coupon");
-const btnCalcPrice = document.querySelector("#e2 .btn__calc-price");
-
-btnAddCoupon.addEventListener("click", () => {
-  const inputCouponName = document.querySelector(
-    "#e2 .input__coupon-name"
-  ).value;
-  const inputDiscountValue = document.querySelector(
-    "#e2 .input__coupon-discount"
-  ).value;
-  const couponsList = document.querySelector("#e2 .coupons-list");
-  const couponInfo = document.querySelector("#e2 .info");
-
-  if (
-    inputCouponName === "" ||
-    inputDiscountValue < 1 ||
-    inputDiscountValue > 99
-  ) {
-    couponInfo.innerHTML = \`<i class="fa-solid fa-circle-info"></i> Introduce nombre y número entre 1 - 99\`;
-    setTimeout(() => {
-      couponInfo.innerHTML = "";
-    }, 3000);
-  } else {
-    coupons.push({
-      name: inputCouponName,
-      discount: Number(inputDiscountValue),
-    });
-
-    const allCouponsNames = coupons.map((coupon) => coupon.name);
-    couponsList.innerHTML = \`'\${allCouponsNames}'\`;
-  }
-});
-
-btnDelCoupon.addEventListener("click", () => {
-  coupons.pop();
-  const allCouponsNames = coupons.map((coupon) => coupon.name);
-
-  if (coupons.length == 0) {
-    document.querySelector(
-      "#e2 .coupons-list"
-    ).innerHTML = \`No hay cupones disponibles.\`;
-  } else {
-    document.querySelector(
-      "#e2 .coupons-list"
-    ).innerHTML = \`'\${allCouponsNames}'\`;
-  }
-});
-
-btnCalcPrice.addEventListener("click", () => {
-  const inputPrice = Number(document.querySelector("#e2 .input__price").value);
-  const inputCoupon = document.querySelector("#e2 .input__coupon").value;
-  const couponError = document.querySelector("#e2 .error");
-
-  let couponSearch = (coupon) => {
-    return coupon.name === inputCoupon;
-  };
-  let couponValidation = coupons.find(couponSearch);
-
-  if (!couponValidation) {
-    couponError.innerHTML = \`<i class="fa-solid fa-triangle-exclamation"></i> El cupón "\${inputCoupon}" no existe\`;
-    setTimeout(() => {
-      couponError.innerHTML = "";
-    }, 3000);
-  } else {
-    let discount = couponValidation.discount;
-    let finalPrice = inputPrice - inputPrice * (discount / 100);
-    document.querySelector(
-      "#e2 .result"
-    ).innerHTML = \`El cupón introducido le aplicará un descuento del \${discount} %. 
-      El precio final es \${finalPrice.toFixed(2)} €\`;
-  }
-});
-</pre> `;
+    showCode.style.display = "block";
     e2BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
         Ocultar código
         <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
       </button>`;
   } else {
-    showCode.innerHTML = "";
+    showCode.style.display = "none";
     e2BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
     Mostrar Código
     <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
@@ -347,78 +242,27 @@ btnCalcMediana.addEventListener("click", () => {
   La mediana es = ${mediana}`;
 });
 
-btnCalcModa.addEventListener("click", () => {});
 
-//  Show/hide code animation
+//  Show/hide code animation BTN3
 const e3BtnShowCode = document.querySelector("#e3 .btn__showcode");
 e3BtnShowCode.addEventListener("click", () => {
   const showCode = document.querySelector("#e3 .code");
   showCode.classList.toggle("code__show");
   if (showCode.className === "code code__show") {
-    showCode.innerHTML = `<pre>const numbersList = [];
-const btnAddNumber = document.querySelector("#e3 .btn__add-number");
-const btnDelNumber = document.querySelector("#e3 .btn__del-number");
-const btnCalcMedia = document.querySelector("#e3 .btn__calc-media");
-const btnCalcMediana = document.querySelector("#e3 .btn__calc-mediana");
-const btnCalcModa = document.querySelector("#e3 .btn__calc-moda");
-const showNumberList = document.querySelector("#e3 .show-number-list");
-
-btnAddNumber.addEventListener("click", () => {
-  numbersList.push(
-    Number(document.querySelector("#e3 .input__add-number").value)
-  );
-  showNumberList.innerHTML = \`Lista actual es = (\${numbersList})\`;
-});
-
-btnDelNumber.addEventListener("click", () => {
-  numbersList.pop();
-  if (numbersList.length == 0) {
-    showNumberList.innerHTML = \`La lista está vacía\`;
-  } else {
-    showNumberList.innerHTML = \`Lista actual es = (\${numbersList})\`;
-  }
-});
-
-btnCalcMedia.addEventListener("click", () => {
-  let suma = 0;
-  for (i = 0; i < numbersList.length; i++) {
-    suma += numbersList[i];
-  }
-  let result = suma / numbersList.length;
-  document.querySelector(
-    "#e3 .result"
-  ).innerHTML = \`La media aritmética de la lista es = \${result.toFixed(2)}\`;
-});
-
-btnCalcMediana.addEventListener("click", () => {
-  let listaOrdenada = numbersList.sort((a, b) => a - b);
-  let mediana;
-
-  if (listaOrdenada.length % 2 == 0) {
-    mediana = numbersList[parseInt(listaOrdenada.length / 2)];
-  } else {
-    mediana = numbersList[parseInt(listaOrdenada.length / 2)];
-  }
-
-  document.querySelector(
-    "#e3 .result"
-  ).innerHTML = \`La lista ordenada es: (\${listaOrdenada}) <br>
-  La mediana es = \${mediana}\`;
-});
-
-btnCalcModa.addEventListener("click", () => {});</pre>`;
+    showCode.style.display = "block";
     e3BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
         Ocultar código
         <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
       </button>`;
   } else {
-    showCode.innerHTML = "";
+    showCode.style.display = "none";
     e3BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
     Mostrar Código
     <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
   </button>`;
   }
 });
+
 
 /*-------------------*/
 /*     EXERCISE 4    */
@@ -453,47 +297,19 @@ document.querySelector("#e4 .btn__roll-dice ").addEventListener("click", () => {
   }, 3000);
 });
 
-//  Show/hide code animation
+//  Show/hide code animation BTN4
 const e4BtnShowCode = document.querySelector("#e4 .btn__showcode");
 e4BtnShowCode.addEventListener("click", () => {
   const showCode = document.querySelector("#e4 .code");
   showCode.classList.toggle("code__show");
   if (showCode.className === "code code__show") {
-    showCode.innerHTML = `<pre>document.querySelector("#e4 .btn__roll-dice ").addEventListener("click", () => {
-  document.querySelector("#e4 .img-dice").src = "img/rollingdice.gif";
-  setTimeout(() => {
-    let diceNumber = Number(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
-    document.querySelector(
-      "#e4 .result"
-    ).innerHTML = \`Has sacado un: \${diceNumber}\`;
-    switch (diceNumber) {
-      case 1:
-        document.querySelector("#e4 .img-dice").src = "img/dado_1.jpg";
-        break;
-      case 2:
-        document.querySelector("#e4 .img-dice").src = "img/dado_2.jpg";
-        break;
-      case 3:
-        document.querySelector("#e4 .img-dice").src = "img/dado_3.jpg";
-        break;
-      case 4:
-        document.querySelector("#e4 .img-dice").src = "img/dado_4.jpg";
-        break;
-      case 5:
-        document.querySelector("#e4 .img-dice").src = "img/dado_5.jpg";
-        break;
-      case 6:
-        document.querySelector("#e4 .img-dice").src = "img/dado_6.jpg";
-        break;
-    }
-  }, 3000);
-});</pre>`;
+    showCode.style.display = "block";
     e4BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
         Ocultar código
         <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
       </button>`;
   } else {
-    showCode.innerHTML = "";
+    showCode.style.display = "none";
     e4BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
     Mostrar Código
     <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
@@ -504,3 +320,23 @@ e4BtnShowCode.addEventListener("click", () => {
 /*-------------------*/
 /*     EXERCISE 5    */
 /*-------------------*/
+
+//  Show/hide code animation BTN5
+const e5BtnShowCode = document.querySelector("#e5 .btn__showcode");
+e5BtnShowCode.addEventListener("click", () => {
+  const showCode = document.querySelector("#e5 .code");
+  showCode.classList.toggle("code__show");
+  if (showCode.className === "code code__show") {
+    showCode.style.display = "block";
+    e5BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-up hvr-icon">
+        Ocultar código
+        <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+      </button>`;
+  } else {
+    showCode.style.display = "none";
+    e5BtnShowCode.innerHTML = `<button type="button" class="hvr-icon-down hvr-icon2">
+    Mostrar Código
+    <i class="fas fa-angle-down hvr-icon-down hvr-icon2"></i>
+  </button>`;
+  }
+});

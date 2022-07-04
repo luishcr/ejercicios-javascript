@@ -7,7 +7,7 @@ $secondary-color: #101010;
 $terciary-color: #fdd405;
 $dark-background: #333333;
 $darknest-background: #2a2a2a;
-$code-background: #1f1f1f;
+$code-background: #272822;
 
 /*---------------------------*/
 /*   GLOBALS STYLES   */
@@ -108,7 +108,7 @@ body {
 
 .container {
   background-color: $primary-color;
-  box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+  // box-shadow: 0rem 0rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
   color: $secondary-color;
   border-radius: 1rem;
   margin: auto;
@@ -119,7 +119,7 @@ body {
   body.dark & {
     background-color: $dark-background;
     color: $primary-color;
-    border: 1px solid $primary-color;
+    // border: 1px solid $primary-color;
     .btn__showcode {
       button {
         color: $primary-color;
@@ -127,6 +127,7 @@ body {
     }
 
     hr {
+      margin: 4rem 0rem;
       color: $primary-color;
     }
   }
@@ -164,7 +165,7 @@ body {
 
   pre {
     background-color: $code-background;
-    color: $primary-color;
+    font-size: 1.7rem;
     padding: 2rem;
     margin: 2rem;
     border-radius: 1rem;
@@ -188,18 +189,23 @@ body {
   }
 
   .code {
-    transform: scaleY(0);
-    transition: transform 400ms ease 0ms;
-    &.code__show {
-      transform: scaleY(1);
-      transition: transform 400ms ease 0ms;
-    }
+    display: none;
+    // transform: scaleY(0);
+    // transition: transform 400ms ease 0ms;
+    // &.code__show {
+    //   transform: scaleY(1);
+    //   transition: transform 400ms ease 0ms;
+    // }
+  }
+
+  hr {
+    margin: 4rem 0;
   }
 }
 
 #e4 {
   .img-dice {
-    margin-left: 4rem;
+    margin-left: 10rem;
     border-radius: 1rem;
   }
 }
