@@ -1,5 +1,3 @@
 ## JavaScript Challenges (WIP)
-Challenges from:
-- Platzi
-- HackerRank
-- LeetCode
+Ejercicios prácticos con JavaScript y solución del código con syntax highlighting
+
